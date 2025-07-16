@@ -11,7 +11,7 @@ FROM nginx:alpine
 # Copiar el build de React a la ruta pública de NGINX
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Exponer puerto 80 (por defecto NGINX sirve en 80)
+# Exponer puerto 80
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
